@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<h1>
+Patients <br>
+<br>
+
+</h1>
+
+<form method="POST" action="">
+  {% for x in data2 %}
+  <label for="P_Code">P_Code:</label>
+  <input type="text" id="P_Code" name="P_Code" value={{x[0]}}><br><br>
+  <label for="P_Name">P_Name:</label>
+  <input type="text" id="P_Name" name="P_Name" value={{x[1]}}><br><br>
+  <label for="INS_Code">INS_Code:</label>
+  <input type="text" id="INS_Code" name="INS_Code" value={{x[2]}}><br><br>
+  <label for="P_Address">P_Address:</label>
+  <input type="text" id="P_Address" name="P_Address" value={{x[3]}}><br><br>
+  <label for="P_Address">P_Address:</label>
+  <input type="text" id="P_Address" name="P_Address" value={{x[4]}}><br><br>
+  <label for="P_City">P_City:</label>
+  <input type="text" id="P_City" name="P_City" value={{x[5]}}><br><br>
+  <label for="P_State">P_State:</label>
+  <input type="text" id="P_State" name="P_State" value={{x[6]}}><br><br>
+  <label for="P_Zip">P_Zip:</label>
+  <input type="text" id="P_Zip" name="P_Zip" value={{x[7]}}><br><br>
+  {% endfor %}
+  
+  <input type="submit" name="submit_button" value="Add">
+  <input type="submit" name="submit_button" value="Delete">
+  <input type="submit" name="submit_button" value="Query">
+  <input type="submit" name="submit_button" value="Report">
+  <input type="submit" name="submit_button" value="Exit">
+  
+ </form>
+ <div>
+<button onClick="window.print()">Print
+</button></div>
+
+</html>
+<!-- end document-->
